@@ -1,0 +1,22 @@
+{% extends 'music/base.html' %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Album</title>
+    <div class="ao">
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% include 'music/form-template.html' %}
+            <hr>
+            <button type="submit">Submit</button>
+        </form>
+
+    </div>
+</head>
+<body>
+
+</body>
+{% endblock %}
+</html>

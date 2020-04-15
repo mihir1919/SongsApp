@@ -1,0 +1,41 @@
+{% extends 'music/base.html' %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>songs</title>
+</head>
+<div class="bod">
+<body style="text-align: center;text-decoration: aqua;">
+{% if album %}
+    <div class="ao">
+    <div class="ab">
+    <h1>{{ album.title }}</h1>
+    <img src={{ album.logo.url }} height=200px>
+    <h2>{{ album.artist }}</h2></div>
+    <br><br>
+    <hr>
+
+    {% if error_message %}
+        <h1>{{ error_message}}</h1>
+    {% endif %}
+    {% for song in album.songs_set.all %}
+        <input type="radio" id="song{{ forloop.counter }}" name="song" value="{{ song.id }}" />
+            <label for="song{{ forloop.counter }}">
+            {{ song.sname }}
+            </label>
+             <button><span class="glyphicon glyphicon-trash"></span></button>
+                <button><span class="glyphicon glyphicon-star"></span></button></li>
+        <hr>
+
+    {% endfor %}
+    </div>
+    {% else %}
+    <h1>bhapp</h1>
+{% endif %}
+
+</body>
+</div>
+{% endblock %}
+</html>

@@ -1,0 +1,53 @@
+body{
+	background: gray url("images/i.png") ;
+    background-size: cover;
+}
+
+div.bod{
+    font-family: 'Tillana', cursive;
+}
+
+li{
+
+    font-size: large;
+}
+
+
+li.bo{
+    display:inline-block;
+    border-style: solid;
+    padding:10px;
+    margin:60px;
+    background-color: lightgray;
+}
+
+
+
+a{
+    color: darkgoldenrod;
+    text-decoration: darkgreen;
+}
+
+div.ao{
+    text-align: center;
+    display:block;
+    background-color: lightgray;
+    border-style: solid;
+    padding:10px;
+    margin:60px;
+    min-width: 600px;
+}
+
+div.ab{
+    text-align: center;
+    background-color: gray;
+    border: solid 0px;
+    padding: 10px;
+    width: 400px ;
+    display: inline-block;
+}
+
+
+span{
+    color:black;
+}

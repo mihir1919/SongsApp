@@ -1,0 +1,18 @@
+{% extends 'music/base.html' %}
+{% block body %}
+    <div class="bod">
+    <ul>
+        <div>
+        {% for album in object_list %}
+            <li class="bo"><a  href="{% url 'music:detail' album.id %}"><img src={{ album.logo.url }} height=250px width="250px"><br><h2>{{ album.title }}</h2></a>
+                <br><button>View Details</button>   <form action="{% url 'music:album-delete' album.id %}" method="post">
+                    {% csrf_token %}
+                    <button><span class="glyphicon glyphicon-trash"></span></button>
+                <button><span class="glyphicon glyphicon-star"></span></button>
+        </form>
+            </li>
+
+        {% endfor %}
+        </div>
+    </ul></div>
+{% endblock %}
